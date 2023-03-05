@@ -1,0 +1,197 @@
+@import "dav-style.css";
+
+/* ==========
+  ! FUENTES ¡ 
+========== */
+@font-face {
+  font-family: "zurchlc";
+  src: url("../fonts/zurchlc/zurchlc.eot");
+  src: url("../fonts/zurchlc/zurchlc.eot#?iefix") format("embedded-opentype"),
+    url("../fonts/zurchlc/zurchlc.ttf") format("truetype"),
+    url("../fonts/zurchlc/zurchlc.svg") format("svg"),
+    url("../fonts/zurchlc/zurchlc.woff") format("woff");
+}
+
+/* ====================
+  ! CUSTOM PROPETIES ¡
+==================== */
+:root {
+  /* * General * */
+  --font-family: "zurchlc";
+}
+
+/* ================
+  ! STYLE - GENERAL ¡
+================ */
+body {
+  font-family: var(--font-family);
+  background-color: var(--cl-white);
+  /*font-size: var(--step-1);*/
+}
+
+h2 {
+  color: var(--cl-blue);
+}
+.title-h3 {
+  margin-bottom: 3rem;
+  padding: 0;
+  width: auto;
+  height: fit-content;
+  position: relative;
+  font-size: var(--step-2);
+  color: var(--cl-blue);
+}
+.title-h3::after,
+.title-h3::before {
+  top: 100%;
+  left: 0;
+  content: " ";
+  height: 0.25rem;
+  width: 3.12rem;
+  position: absolute;
+  background-color: var(--cl-green);
+}
+.title-h3::after {
+  width: 1.56rem;
+  margin-top: 0.5rem;
+}
+
+/* * Container Header * */
+.container-header {
+  background-color: transparent;
+  box-shadow: 0 0 1.25rem 0.063rem rgba(0, 0, 0, 0.75);
+}
+/*.index-header {
+  background-color: transparent;
+}*/
+.menu-a {
+  font-size: var(--step-1);
+  color: var(--cl-white);
+}
+.menu-a:before {
+  background-color: var(--cl-black-dark);
+}
+.toggle-icon,
+.toggle-icon::after,
+.toggle-icon::before {
+  background-color: var(--cl-blue);
+}
+
+/* * Container Footer * */
+.copy-p {
+  margin-top: 1.2rem;
+  font-size: var(--step-0);
+  color: var(--cl-black-dark);
+}
+
+.icon-social {
+  width: 50%;
+}
+.icon-social > a {
+  font-size: var(--step-2);
+}
+
+/* ===================
+  ! --- STYLE INDEX --- ¡
+=================== */
+/* * Header * */
+
+/* ** Content ** */
+.sub-title {
+  font-size: var(--step-1);
+  font-weight: 600;
+}
+
+/* ===================
+  ! --- STYLE CV --- ¡
+=================== */
+/* * Hi * */
+.hi-icon {
+  margin: auto;
+  width: 80%;
+}
+.hi-icon img {
+  max-width: calc(var(--step-3) * 2);
+}
+.hi-me-img img {
+  max-width: calc(var(--step-5) * 2);
+}
+
+/* ** Card CV ** */
+.item-card-cv {
+  padding: 1rem;
+  box-shadow: 0 0 1.25rem 0.063rem rgba(0, 0, 0, 0.75);
+}
+.card-cv-list {
+  margin-top: 1rem;
+  width: 100%;
+}
+.cv-list-item > img {
+  max-width: calc(var(--step--1) * 2);
+}
+
+/* *** Card Experience *** */
+.card-experience {
+  margin: 2rem auto;
+  width: 90%;
+  position: relative;
+}
+/*.card-experience::after {
+  content: "";
+  width: 0.125rem;
+  height: 100%;
+  background: var(--cl-black-dark);
+  position: absolute;
+  top: 0;
+  left: calc(50% - 0.063rem);
+  z-index: 1;
+}*/
+.item-experience {
+  margin-bottom: 7rem;
+  position: relative;
+}
+.item-experience::after {
+  content: "";
+  display: block;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 6.25rem;
+  background-color: var(--cl-blue);
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 0.4rem);
+  left: calc(50% - 0.3rem);
+}
+.experience-h4 {
+  width: calc(42% + 1.25rem);
+  font-size: var(--step-1);
+  font-weight: normal;
+}
+.experience-p {
+  padding: 0.5rem;
+  width: 40%;
+  position: relative;
+  box-shadow: 0 0 1.25rem 0.063rem rgba(0, 0, 0, 0.75);
+}
+.experience-p::after {
+  content: "";
+  display: block;
+  border: 1.2rem solid transparent;
+  border-left: 1.2rem solid var(--cl-grey);
+  position: absolute;
+  right: -3rem;
+  top: calc(50% - 1.2rem);
+}
+.item-experience:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.item-experience:nth-child(even) .experience-h4 {
+  justify-content: end;
+}
+.item-experience:nth-child(even) .experience-p::after {
+  content: "";
+  border: 1.2rem solid transparent;
+  border-right: 1.2rem solid var(--cl-grey);
+  right: initial;
+  left: -3rem;
+}
