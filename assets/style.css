@@ -58,8 +58,7 @@ h2 {
 
 /* * Container Header * */
 .container-header {
-  background-color: transparent;
-  box-shadow: 0 0 1.25rem 0.063rem rgba(0, 0, 0, 0.75);
+  background-color: var(--cl-white);
 }
 /*.index-header {
   background-color: transparent;
