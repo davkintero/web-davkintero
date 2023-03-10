@@ -210,3 +210,29 @@ h2 {
   font-weight: bold;
   color: var(--cl-blue);
 }
+
+/* ** proyect List ** */
+.site-item {
+  padding: 1rem;
+  background-color: var(--cl-white);
+  box-shadow: var(--shadow);
+}
+.site-logo > img {
+  max-width: calc(var(--step-2) * 5);
+}
+.site-content {
+  margin-left: 1rem;
+  width: 100%;
+  list-style-type: decimal;
+}
+.site-content > li {
+  width: 100%;
+  font-size: var(--step-0);
+  line-height: 1.4;
+}
+.site-content > li::marker {
+  color: var(--cl-blue);
+}
+.site-content > li > i {
+  color: var(--cl-blue);
+}
