@@ -38,23 +38,23 @@ function changeClass() {
 function validateInputs(e) {
   function validateCampoInput(expreReg, input, campo) {
     if (expreReg.test(input.value)) {
-        document.getElementById(`group-${campo}`).classList.remove('validation-form-incorrect');
-        document.getElementById(`group-${campo}`).classList.add('validation-form-correct');
-        document.querySelector(`#group-${campo} i`).classList.add('zmdi-check-all');
-        document.querySelector(`#group-${campo} i`).classList.remove('zmdi-close-circle');
-        document.querySelector(`#group-${campo} .item-text-error`).classList.remove('item-text-error-activo');
-        campos [campo] = true;
-      } else {
-        document.getElementById(`group-${campo}`).classList.add('validation-form-incorrect');
-        document.getElementById(`group-${campo}`).classList.remove('validation-form-correct');
-        document.querySelector(`#group-${campo} i`).classList.add('zmdi-close-circle');
-        document.querySelector(`#group-${campo} i`).classList.remove('zmdi-check-all');
-        document.querySelector(`#group-${campo} .item-text-error`).classList.add('item-text-error-activo');
-        campos [campo] = false;
-      }
+      document.getElementById(`group-${campo}`).classList.remove('validation-form-incorrect');
+      document.getElementById(`group-${campo}`).classList.add('validation-form-correct');
+      document.querySelector(`#group-${campo} i`).classList.add('zmdi-check-all');
+      document.querySelector(`#group-${campo} i`).classList.remove('zmdi-close-circle');
+      document.querySelector(`#group-${campo} .item-text-error`).classList.remove('item-text-error-activo');
+      campos [campo] = true;
+    } else {
+      document.getElementById(`group-${campo}`).classList.add('validation-form-incorrect');
+      document.getElementById(`group-${campo}`).classList.remove('validation-form-correct');
+      document.querySelector(`#group-${campo} i`).classList.add('zmdi-close-circle');
+      document.querySelector(`#group-${campo} i`).classList.remove('zmdi-check-all');
+      document.querySelector(`#group-${campo} .item-text-error`).classList.add('item-text-error-activo');
+      campos [campo] = false;
+    }
   }
   switch (e.target.name) {
-    case 'name':
+  case 'name':
       /*if (expreReg.nameReg.test(e.target.value)) {
         document.getElementById('group-name').classList.remove('validation-form-incorrect');
         document.getElementById('group-name').classList.add('validation-form-correct');
@@ -68,37 +68,37 @@ function validateInputs(e) {
         document.querySelector('#group-name i').classList.remove('zmdi-check-all');
         document.querySelector('#group-name .item-text-error').classList.add('item-text-error-activo');
       }*/
-      validateCampoInput(expreReg.nameReg, e.target, 'name');
+    validateCampoInput(expreReg.nameReg, e.target, 'name');
     break;
 
-    case 'email':
-      validateCampoInput(expreReg.emailReg, e.target, 'email');
+  case 'email':
+    validateCampoInput(expreReg.emailReg, e.target, 'email');
     break;
 
-    case 'affair':
-      validateCampoInput(expreReg.affairReg, e.target, 'affair');
+  case 'affair':
+    validateCampoInput(expreReg.affairReg, e.target, 'affair');
     break;
   }
 }
 
 function validateTextArea(e) {
   switch (e.target.name) {
-    case 'comments':
-      if (expreReg.commentsReg.test(e.target.value)) {
-        document.getElementById('group-comments').classList.remove('validation-form-incorrect');
-        document.getElementById('group-comments').classList.add('validation-form-correct');
-        document.querySelector('#group-comments i').classList.add('zmdi-check-all');
-        document.querySelector('#group-comments i').classList.remove('zmdi-close-circle');
-        document.querySelector('#group-comments .item-text-error').classList.remove('item-text-error-activo');
-        campos ['comments'] = true;
-      } else {
-        document.getElementById('group-comments').classList.add('validation-form-incorrect');
-        document.getElementById('group-comments').classList.remove('validation-form-correct');
-        document.querySelector('#group-comments i').classList.add('zmdi-close-circle');
-        document.querySelector('#group-comments i').classList.remove('zmdi-check-all');
-        document.querySelector('#group-comments .item-text-error').classList.add('item-text-error-activo');
-        campos ['comments'] = false
-      }
+  case 'comments':
+    if (expreReg.commentsReg.test(e.target.value)) {
+      document.getElementById('group-comments').classList.remove('validation-form-incorrect');
+      document.getElementById('group-comments').classList.add('validation-form-correct');
+      document.querySelector('#group-comments i').classList.add('zmdi-check-all');
+      document.querySelector('#group-comments i').classList.remove('zmdi-close-circle');
+      document.querySelector('#group-comments .item-text-error').classList.remove('item-text-error-activo');
+      campos ['comments'] = true;
+    } else {
+      document.getElementById('group-comments').classList.add('validation-form-incorrect');
+      document.getElementById('group-comments').classList.remove('validation-form-correct');
+      document.querySelector('#group-comments i').classList.add('zmdi-close-circle');
+      document.querySelector('#group-comments i').classList.remove('zmdi-check-all');
+      document.querySelector('#group-comments .item-text-error').classList.add('item-text-error-activo');
+      campos ['comments'] = false
+    }
     break;
   }
 }
@@ -119,7 +119,7 @@ function sendForm(e) {
     });
   } else {
     document.getElementById('item-msn-error').classList.add('item-msn-error-activo');
-     setTimeout(() => {
+    setTimeout(() => {
       document.getElementById('item-msn-error').classList.remove('item-msn-error-activo');
     }, 3000);
   }

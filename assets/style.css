@@ -7,9 +7,9 @@
   font-family: "zurchlc";
   src: url("../fonts/zurchlc/zurchlc.eot");
   src: url("../fonts/zurchlc/zurchlc.eot#?iefix") format("embedded-opentype"),
-    url("../fonts/zurchlc/zurchlc.ttf") format("truetype"),
-    url("../fonts/zurchlc/zurchlc.svg") format("svg"),
-    url("../fonts/zurchlc/zurchlc.woff") format("woff");
+  url("../fonts/zurchlc/zurchlc.ttf") format("truetype"),
+  url("../fonts/zurchlc/zurchlc.svg") format("svg"),
+  url("../fonts/zurchlc/zurchlc.woff") format("woff");
 }
 
 /* ====================
@@ -194,4 +194,19 @@ h2 {
   border-right: 1.2rem solid var(--cl-grey);
   right: initial;
   left: -3rem;
+}
+
+/* ===================
+  ! --- STYLE DAVCODE --- ¡
+=================== */
+/* * proyect List * */
+.proyect-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.proyect-item::marker {
+  font-size: var(--step-1);
+  font-weight: bold;
+  color: var(--cl-blue);
 }
